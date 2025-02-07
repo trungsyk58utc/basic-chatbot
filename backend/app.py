@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, Blueprint
 from chatterbot import ChatBot
-from flask_cors import CORS, cross_origin # type: ignore
+from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)

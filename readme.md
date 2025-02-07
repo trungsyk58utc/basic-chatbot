@@ -40,3 +40,4 @@ The project will be run in adress
 http://localhost:5173
 ```
 #### Demo video
+The demo video can be found in the [demo](demo) folder.
