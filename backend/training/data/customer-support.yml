@@ -1,0 +1,98 @@
+categories:
+  - medical_support
+
+conversations:
+  - - "Hello"
+    - "Hello! How can I assist you today?"
+    - "Hi there! How may I help you?"
+    - "Welcome! Do you need any medical assistance?"
+
+  - - "I need to book a doctor's appointment."
+    - "Sure! What type of doctor are you looking for?"
+    - "Of course! Which specialty do you need—general, cardiology, dermatology, or something else?"
+    - "Absolutely! Do you have a preferred doctor or should I suggest one for you?"
+
+  - - "I need a general check-up."
+    - "I can help with that. Would you like a morning or afternoon appointment?"
+    - "No problem! Do you have a preferred day for your check-up?"
+    - "Sure! Our general check-up includes blood pressure, cholesterol, and diabetes screening."
+
+  - - "Do you have any available slots for tomorrow?"
+    - "Yes, we have slots available for tomorrow. What time works best for you?"
+    - "Tomorrow we have openings in the morning and afternoon. Which one would you prefer?"
+    - "Yes, I see availability tomorrow. Do you prefer in-person or telemedicine consultation?"
+
+  - - "What are your clinic hours?"
+    - "Our clinic is open from 8 AM to 8 PM, Monday to Saturday."
+    - "We operate from 8 AM to 8 PM on weekdays and 9 AM to 5 PM on weekends."
+    - "Our working hours are 8 AM - 8 PM. Would you like to schedule an appointment?"
+
+  - - "Do you accept health insurance?"
+    - "Yes, we accept most major health insurance plans. Would you like me to check if yours is covered?"
+    - "Yes, we work with a variety of insurance providers. Please provide your insurance name."
+    - "Yes, you can check the list of accepted insurances on our website or I can check for you."
+
+  - - "How can I get my lab test results?"
+    - "You can check your lab results online through our patient portal or visit the clinic."
+    - "Your lab results will be available within 24-48 hours. You can access them online or in person."
+    - "You will receive an SMS notification when your results are ready. Would you like me to check your status?"
+
+  - - "Can I get a prescription refill?"
+    - "Yes, I can assist with that. May I have your prescription number?"
+    - "Of course! You can request a refill through our website or visit our clinic."
+    - "Yes, but we need to verify your last prescription. When was your last visit?"
+
+  - - "What should I do in case of a medical emergency?"
+    - "If it's an emergency, please call 911 or visit the nearest hospital immediately."
+    - "In a medical emergency, it's best to go to the emergency room or call an ambulance."
+    - "If you need urgent care, I can help you find the nearest hospital. Would you like that?"
+
+  - - "Do you provide telemedicine consultations?"
+    - "Yes, we offer online consultations. Would you like to schedule a virtual appointment?"
+    - "Yes, we provide telemedicine services via video call. Do you need one today?"
+    - "Yes, we have doctors available for online consultations. Would you like a link to book an appointment?"
+
+  - - "How much does a consultation cost?"
+    - "A general consultation costs $50, but prices vary based on the specialist."
+    - "Our consultation fees range from $50 to $150 depending on the doctor and specialty."
+    - "A basic consultation is $50, but I can check for discounts if you'd like."
+
+  - - "What are the symptoms of the flu?"
+    - "Common flu symptoms include fever, cough, sore throat, and fatigue."
+    - "Flu symptoms often include chills, fever, muscle aches, and sore throat."
+    - "If you have fever, runny nose, cough, or body pain, it might be the flu. Would you like to consult a doctor?"
+
+  - - "Do you have COVID-19 testing?"
+    - "Yes, we offer both PCR and rapid COVID-19 tests. Would you like to schedule a test?"
+    - "Yes, we provide COVID-19 testing at our clinic. Do you need an appointment?"
+    - "Yes, both PCR and rapid tests are available. Would you like home testing or in-clinic testing?"
+
+  - - "How can I prevent high blood pressure?"
+    - "To prevent high blood pressure, maintain a healthy diet, exercise regularly, and reduce stress."
+    - "Avoiding too much salt, exercising daily, and managing stress can help control blood pressure."
+    - "Keeping a balanced diet, staying active, and monitoring your health regularly is key."
+
+  - - "What vaccines do you offer?"
+    - "We offer flu, COVID-19, and childhood immunizations. Would you like to schedule one?"
+    - "Our clinic provides flu shots, tetanus boosters, and COVID-19 vaccines."
+    - "We have vaccines for flu, hepatitis, and travel-related diseases. What are you looking for?"
+
+  - - "What should I eat to improve my immune system?"
+    - "Eating fruits, vegetables, and foods rich in vitamins C and D can boost immunity."
+    - "A diet with fresh vegetables, lean protein, and enough sleep helps strengthen your immune system."
+    - "Drinking plenty of water and eating vitamin-rich foods like citrus fruits and garlic can help."
+
+  - - "How long does it take to recover from a cold?"
+    - "A common cold usually lasts about 7-10 days, but staying hydrated and resting can help."
+    - "It typically takes about a week to recover, but symptoms may last longer."
+    - "Cold recovery varies, but drinking fluids, getting enough rest, and taking vitamin C may help speed up recovery."
+
+  - - "How can I relieve stress?"
+    - "Try deep breathing exercises, meditation, or a short walk to relieve stress."
+    - "Listening to music, exercising, or talking to a friend can help reduce stress."
+    - "Practicing yoga, getting enough sleep, and reducing caffeine intake may help."
+
+  - - "Goodbye"
+    - "Goodbye! Stay healthy and take care!"
+    - "Thank you for visiting. Have a great day!"
+    - "Take care and stay safe! Feel free to chat with me anytime."
