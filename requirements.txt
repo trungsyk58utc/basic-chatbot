@@ -1,4 +1,5 @@
 flask
+flask-cors
 chatterbot==1.0.4
 chatterbot_corpus
 pytz

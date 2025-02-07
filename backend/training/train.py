@@ -12,6 +12,12 @@ chatbot = ChatBot(
 # Huấn luyện chatbot
 trainer = ChatterBotCorpusTrainer(chatbot)
 
+# Check bot trainer with corpus englist. We may not need it
+try:
+    trainer.train("chatterbot.corpus.english")
+except Exception as e:
+    print("Bot had training or error:", e)
+
 # Get all data in traning data folder
 training_folder = "training/data"
 training_files = [
@@ -19,7 +25,7 @@ training_files = [
     if f.endswith(".yml")
 ]
 
-# Checking yml files
+# Checking yml files & training
 if training_files:
     print(f"Traning {len(training_files)} file .yml...")
     trainer.train(*training_files)

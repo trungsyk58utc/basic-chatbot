@@ -1,11 +1,12 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Blueprint
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer
+from flask_cors import CORS, cross_origin # type: ignore
 
 app = Flask(__name__)
+CORS(app)
 
 # Check and exist sqlite
-english_bot = ChatBot(
+chatbot = ChatBot(
     "Chatbot for Basic Customer support",
     storage_adapter="chatterbot.storage.SQLStorageAdapter",
     database_uri="sqlite:///database.sqlite3",
@@ -18,14 +19,11 @@ english_bot = ChatBot(
     ]
 )
 
-# Check bot trainer with corpus englist. We may not need it
-trainer = ChatterBotCorpusTrainer(english_bot)
-try:
-    trainer.train("chatterbot.corpus.english")
-except Exception as e:
-    print("Bot had training or error:", e)
+# Create a blueprint for version 1 of the API
+v1 = Blueprint("v1", __name__, url_prefix="/api/v1")
+CORS(v1)
 
-@app.route("/chat", methods=["POST"])
+@v1.route("/chat", methods=["POST"])
 def get_bot_response():
     data = request.get_json()
     user_text = data.get("message")
@@ -33,8 +31,9 @@ def get_bot_response():
     if not user_text:
         return jsonify({"error": "Message is required"}), 400
 
-    response = str(english_bot.get_response(user_text))
+    response = str(chatbot.get_response(user_text))
     return jsonify({"response": response})
 
+app.register_blueprint(v1)
 if __name__ == "__main__":
     app.run(debug=True)

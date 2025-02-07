@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 function App() {
+  const BASE_URL_API = "http://127.0.0.1:5000/api/v1/chat";
   const { register, handleSubmit, reset } = useForm();
   const [listQuestionAndAnswer, setListQuestionAndAnswer] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -34,15 +35,40 @@ function App() {
     clearTimeout(timeOut);
   };
 
+  const requestQuestion = async (question) => {
+    try {
+      const response = await fetch(BASE_URL_API, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message: question }),
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error fetching question response:", error);
+      throw error;
+    }
+  };
+  
+
   const onSubmit = async (data) => {
     const { question } = data;
     setListQuestionAndAnswer((prev) => [...prev, questionTemplate(question)]);
     reset();
     scrollToBottom();
     setLoading(true);
+    const response = await requestQuestion(question);
     setLoading(false);
     setListQuestionAndAnswer((prev) => [
       ...prev,
+      answerTemplate(response.response),
     ]);
     scrollToBottom();
   };
